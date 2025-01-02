@@ -1,0 +1,273 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+}
+
+/* Header */
+header {
+  background: #0553a7;
+  color: #fff;
+  padding: 10px 20px;
+}
+
+header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+header .logo {
+  font-size: 24px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+}
+
+header nav ul {
+  display: flex;
+  list-style: none;
+  gap: 20px;
+}
+
+header nav ul li a {
+  color: white;
+  text-decoration: none;
+}
+
+header nav ul li a.active {
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+header .btn {
+  background: #fff;
+  color: #0553a7;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* Hero Section */
+.hero {
+  background: url('/css/image/book-with-green-board-background_1150-3837.avif') no-repeat center center/cover;
+  height: 90vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  text-align: center;
+  opacity: 0.9;
+}
+
+.hero h1 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+  color: black;
+  font-weight: bold;
+}
+
+.hero p {
+  margin-bottom: 20px;
+  color: black;
+  font-weight: bold;
+}
+
+.hero .btn {
+  padding: 10px 20px;
+  border: none;
+  background: #fff;
+  color: #0553a7;
+  font-size: 1rem;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+/* About Section */
+/* .about {
+  padding: 40px 20px;
+  text-align: center;
+  background-color: antiquewhite;
+}
+
+.about h2 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.about p {
+  font-size: 1rem;
+  max-width: 800px;
+  margin: auto;
+} */
+
+/* Services Section */
+.services {
+  background: #f4f4f4;
+  padding: 40px 20px;
+  margin-top: 20px;
+  background: url('/css/image/b1.avif') no-repeat center center/cover;
+  height: 100vh;
+}
+
+.services .container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+.services .container h2{
+  color: #f4f4f4;
+}
+.services .card {
+  flex: 1 1 300px;
+  max-width: 300px;
+  padding: 20px;
+  background: white;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  background-color: antiquewhite;
+}
+
+.services .card i {
+  font-size: 2rem;
+  color: #0553a7;
+  margin-bottom: 10px;
+}
+
+/* Courses Section */
+.courses {
+  padding: 40px 20px;
+}
+
+.courses .course-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+}
+
+.courses .course-item {
+  background: #f9f9f9;
+  border-radius: 5px;
+  overflow: hidden;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.courses .course-item img {
+  width: 100%;
+  height: auto;
+}
+
+.courses .course-item h3 {
+  font-size: 1.2rem;
+  margin: 10px 0;
+}
+
+.courses .course-item p {
+  padding: 0 10px 10px;
+}
+
+/* Footer */
+footer {
+  background: #0553a7;
+  color: white;
+  padding: 40px 20px;
+  text-align: center;
+}
+
+footer .container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: space-between;
+}
+
+footer .footer-section {
+  flex: 1 1 200px;
+  max-width: 300px;
+}
+
+footer .footer-section h3 {
+  margin-bottom: 10px;
+}
+
+footer .footer-section ul {
+  list-style: none;
+}
+
+footer .footer-section ul li a {
+  color: white;
+  text-decoration: none;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  header .container {
+      flex-direction: column;
+  }
+
+  .hero h1 {
+      font-size: 2rem;
+  }
+
+  .services .container {
+      flex-direction: column;
+      align-items: center;
+  }
+
+  footer .container {
+      flex-direction: column;
+      align-items: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero {
+      height: 50vh;
+  }
+
+  .hero h1 {
+      font-size: 1.8rem;
+  }
+
+  .hero p {
+      font-size: 0.9rem;
+  }
+  .services{
+    height: 120vh;
+  }
+
+  .courses .course-grid {
+      grid-template-columns: 1fr;
+  }
+
+}
+
+@media (max-width: 480px) {
+  header nav ul {
+      flex-direction: column;
+      gap: 10px;
+  }
+
+  header .btn {
+      margin-top: 10px;
+  }
+
+  .hero h1 {
+      font-size: 1.5rem;
+  }
+
+  .about p {
+      font-size: 0.9rem;
+  }
+}
